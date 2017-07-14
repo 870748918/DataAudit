@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.gd.dao.AdminDao">
+<resultMap id="BaseResultMap" type="cn.com.gd.pojo.Admin">
+    <id column="UserID" property="userID" jdbcType="VARCHAR"/>
+    <result column="UserName" property="userName" jdbcType="VARCHAR"/>
+    <result column="UserPass" property="userPass" jdbcType="VARCHAR"/>
+</resultMap>
+<select id="findByUserIDAndUserPass" resultMap="BaseResultMap" parameterType="cn.com.gd.pojo.Admin">
+    select * from data_admin where UserID = #{userID} and UserPass = #{userPass}
+</select>
+</mapper>

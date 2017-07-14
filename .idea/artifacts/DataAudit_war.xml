@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="DataAudit:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="DataAudit-1.war">
+      <element id="artifact" artifact-name="DataAudit:war exploded" />
+    </root>
+  </artifact>
+</component>
